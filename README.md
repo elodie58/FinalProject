@@ -38,9 +38,16 @@ A Spring Boot RESTful API for managing content creators, their profiles, and pub
 
 - **Secure Endpoints**
     - Protected routes using Spring Security and JWT filters
+## 📊 Class Diagram
 
-## 🗃 Class Diagram
-"C:\Users\yavar\Desktop\ClassDiagram.drawio"
+## 📊 Class Diagram
+
+## 📊 Class Diagram
+
+![Class Diagram](docs/contentcreatorscatalog.png)
+
+
+
 ## 🗃 Project Structure
 
 account
