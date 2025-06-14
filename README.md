@@ -39,6 +39,8 @@ A Spring Boot RESTful API for managing content creators, their profiles, and pub
 - **Secure Endpoints**
     - Protected routes using Spring Security and JWT filters
 
+## 🗃 Class Diagram
+"C:\Users\yavar\Desktop\ClassDiagram.drawio"
 ## 🗃 Project Structure
 
 account
@@ -56,18 +58,25 @@ content, content-type, language
 dataloader
 
 security
-### Prerequisites
 
-- Java 17
-- MySQL
-- Maven
 
 ### Setup
+spring:
+datasource:
+url: jdbc:mysql://localhost:3306/content_creators_catalog_db
+username: root
+password: root
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/content-creator-hub.git
-   cd content-creator-hub
+jpa:
+hibernate:
+ddl-auto: update
+
+    show-sql: true
+
+server:
+error:
+include-stacktrace: never
+
 Configure MySQL database
 Update application.yaml:
 
