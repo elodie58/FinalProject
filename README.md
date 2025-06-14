@@ -55,16 +55,7 @@ content, content-type, language
 
 dataloader
 
-shared
-
 security
-
-markdown
-Copier
-Modifier
-
-## ⚙️ Getting Started
-
 ### Prerequisites
 
 - Java 17
@@ -80,19 +71,6 @@ Modifier
 Configure MySQL database
 Update application.yaml:
 
-properties
-Copier
-Modifier
-spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-Run the app
-
-bash
-Copier
-Modifier
-mvn spring-boot:run
 🧪 API Endpoints
 Authentication
 POST /auth/register - Register a new user
@@ -126,4 +104,4 @@ Custom Exception Handling with @ControllerAdvice
 Security Configuration via JWT filters
 
 ✍️ Author
-Elodie - Final Project for Ironhack Java Developer Bootcamp
+Elodie - Final Project for IronHack Java Developer Bootcamp
