@@ -32,6 +32,8 @@ public class ContentController {
         return new ResponseEntity<>(contentService.getContentById(id), HttpStatus.OK);
     }
 
+
+    // DONT RUN THIS
     @GetMapping("/creator/{creatorId}")
     public ResponseEntity<List<Content>> getContentsByCreator(@PathVariable Long creatorId) {
         return new ResponseEntity<>(contentService.getContentsByCreatorId(creatorId), HttpStatus.OK);

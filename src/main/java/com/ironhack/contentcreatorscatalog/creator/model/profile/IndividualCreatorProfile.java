@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class IndividualCreatorProfile extends CreatorProfile {
+public class IndividualCreatorProfile extends CreatorProfile {//id,description,contact,content,age
 
     @Min(value = 13, message = "Age must be at least 13")
     private int age;

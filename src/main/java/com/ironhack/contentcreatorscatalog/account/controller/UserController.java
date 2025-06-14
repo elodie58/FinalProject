@@ -19,12 +19,14 @@ public class UserController {
     @GetMapping("/users")
     @ResponseStatus(HttpStatus.OK)
     public List<User> getUsers() {
+
         return userService.getUsers();
     }
 
     @PostMapping("/users")
     @ResponseStatus(HttpStatus.CREATED)
     public void saveUser(@RequestBody User user) {
+
         userService.saveUser(user);
     }
 }

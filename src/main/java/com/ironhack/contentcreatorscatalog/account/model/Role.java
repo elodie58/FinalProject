@@ -20,9 +20,9 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id;//1,2,3,4,....
 
-    private String name;
+    private String name;//USER,ADMIN
 
     @ManyToMany(mappedBy = "roles", fetch = LAZY)
     @JsonIgnore
@@ -30,5 +30,7 @@ public class Role {
 
     public Role(String name) {
         this.name = name;
+        this.users = new ArrayList<>();
+
     }
 }

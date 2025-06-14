@@ -15,7 +15,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Getter
 @Setter
-public abstract class CreatorProfile {
+public abstract class CreatorProfile {//id,description,contact,content
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,8 +25,8 @@ public abstract class CreatorProfile {
     @Size(max = 255, message = "Description must be under 255 characters")
     private String description;
 
-    @OneToOne(optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(name = "contact_id", referencedColumnName = "id", nullable = false)
+    @OneToOne(optional = false,cascade = CascadeType.ALL)
+    //@JoinColumn(name = "contact_id", referencedColumnName = "id", nullable = false)
     private Contact contact;
 
     @OneToMany(mappedBy = "creatorProfile", cascade = CascadeType.ALL)

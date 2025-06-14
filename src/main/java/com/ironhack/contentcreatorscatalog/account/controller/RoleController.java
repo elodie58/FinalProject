@@ -18,6 +18,7 @@ public class RoleController {
     @PostMapping("/roles")
     @ResponseStatus(HttpStatus.CREATED)
     public void saveRole(@RequestBody Role role) {
+
         roleService.save(role);
     }
 

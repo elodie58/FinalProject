@@ -26,7 +26,7 @@ public class AccountDataLoader implements CommandLineRunner {
         // Create and save users
         for (int i = 0; i < 4; i++) {
             String fullName = faker.name().fullName();
-            String username = faker.name().username();
+            String username = "user" + i;
             String password = "1234";
 
             userService.saveUser(new User(fullName, username, password));

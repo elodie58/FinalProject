@@ -30,6 +30,9 @@ public class PersonalContact extends Contact {
     @NotNull
     private Gender gender;
 
-
-
+    public PersonalContact(String phone, String country, String email, Name name, Gender gender) {
+        super(phone, country, email);
+        this.name = name;
+        this.gender = gender;
+    }
 }

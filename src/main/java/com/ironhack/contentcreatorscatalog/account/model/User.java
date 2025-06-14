@@ -18,10 +18,12 @@ import static jakarta.persistence.FetchType.EAGER;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String username;
-    private String password;
+    private Long id;//1,2,3,.....
+
+
+    private String name;//Anna,Nemo...
+    private String username;//USER1,USER2,USER3,....
+    private String password;//{bcrypt}$2a$10$L0eVMymA
 
 
     @ManyToMany(fetch = EAGER)
@@ -36,5 +38,6 @@ public class User {
         this.name = name;
         this.username = username;
         this.password = password;
+        this.roles = new ArrayList<>();
     }
 }

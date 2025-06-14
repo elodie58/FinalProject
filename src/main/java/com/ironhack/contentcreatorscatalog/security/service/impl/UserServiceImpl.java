@@ -21,9 +21,7 @@ import java.util.List;
 @Slf4j
 public class UserServiceImpl implements UserService, UserDetailsService {
 
-
     private final UserRepository userRepository;
-
 
     private final PasswordEncoder passwordEncoder;
 
@@ -40,7 +38,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         user.getRoles().forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getName())));
 
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), authorities);
-
     }
 
     @Override
@@ -51,14 +48,12 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return userRepository.save(user);
     }
 
-
     @Override
     public User getUser(String username) {
         log.info("Fetching user {}", username);
         return userRepository.findFirstByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
     }
-
 
     @Override
     public List<User> getUsers() {

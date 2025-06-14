@@ -7,7 +7,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class CompanyCreatorProfile extends CreatorProfile {
+public class CompanyCreatorProfile extends CreatorProfile {//id,description,contact,content
 
 
 

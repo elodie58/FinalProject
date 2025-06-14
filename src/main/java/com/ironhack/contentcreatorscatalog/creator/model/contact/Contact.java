@@ -1,5 +1,6 @@
 package com.ironhack.contentcreatorscatalog.creator.model.contact;
 
+import com.ironhack.contentcreatorscatalog.creator.model.profile.CreatorProfile;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -14,7 +15,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 
 public abstract class Contact {//id,phone,country,email
 
@@ -37,10 +38,10 @@ public abstract class Contact {//id,phone,country,email
     @Email
     private String email;
 
-    @OneToOne(optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(name = "contact_id", referencedColumnName = "id", nullable = false)
-    private Contact contact;
-
-
+    public Contact(String phone, String country, String email) {
+        this.phone = phone;
+        this.country = country;
+        this.email = email;
+    }
 }
 

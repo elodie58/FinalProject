@@ -43,7 +43,7 @@ A Spring Boot RESTful API for managing content creators, their profiles, and pub
 
 account
 
-controller, model, repository, service, dto, security
+model, repository, security,dto,service,  controller,
 
 creator
 
